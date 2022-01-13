@@ -7,12 +7,12 @@ let listNumber = 0;
 
 function handleSubmit(event) {
    event.preventDefault();
-   
+     
    const itemList = document.createElement('p');
 
    itemList.innerHTML = `${inputBox.value}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
    <button id="edit_${++listNumber}">Edit</button>
-   <button id="delete_${listNumber}">Delete</button>`;   
+   <button id="delete_${listNumber}">Delete</button>`;
    
    // console.log('itemList.innerHTML', itemList.innerHTML);
    // 1) click in inputBox, and it consolelogs "empty string"
@@ -29,17 +29,25 @@ function handleSubmit(event) {
 }
 
 function handleEdit (event) {
-   inputBox.value = event.target.parentElement.innerHTML.split("&nbsp", 1);
+   inputBox.value = event.target.parentElement.textContent.slice(0, -24);
+   
+
    submitButton.textContent = "Finish Editing";
+   submitButton.removeEventListener('click', handleSubmit);
+   submitButton.addEventListener('click', handleEditSubmit);
+  
 
-   // inputBox.value = ;
-
-   // submitButton.innerHTML = "Add to list";
+   
 }
 
-function handleDelete 
-(event) {
+// function handleEditSubmit (event) {
+//    event.
+// }
+
+function handleDelete (event) {
+
    event.target.parentElement.remove();
+
 }
 
 submitButton.addEventListener('click', handleSubmit);
