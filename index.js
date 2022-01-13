@@ -29,12 +29,21 @@ function handleSubmit(event) {
 }
 
 function handleEdit (event) {
-   inputBox.value = event.target.parentElement.textContent.slice(0, -24);
+   
+   event.target.parentElement.textContent.slice(-24);
+
+   const editInputBox = document.createElement('input', { type : 'text', id : 'editInputBox'});
+   const editTextContent = event.target.parentElement.textContent.slice(0, -24);
+
+   event.target.parentElement.prepend(editInputBox);
+
+   editInputBox.value = editTextContent;
    
 
-   submitButton.textContent = "Finish Editing";
-   submitButton.removeEventListener('click', handleSubmit);
-   submitButton.addEventListener('click', handleEditSubmit);
+   
+   // inputBox.value = event.target.parentElement.textContent.slice(0, -24);
+   
+
   
 
    
