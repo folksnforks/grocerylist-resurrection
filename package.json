@@ -1,0 +1,29 @@
+{
+  "name": "grocerylist-resurrection",
+  "version": "1.0.0",
+  "description": "Basic grocery list app",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folksnforks/grocerylist-resurrection.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/folksnforks/grocerylist-resurrection/issues"
+  },
+  "homepage": "https://github.com/folksnforks/grocerylist-resurrection#readme",
+  "devDependencies": { 
+    "jest": "^27.4.7",
+    "@types/jest": "^27.4.0",
+    "ts-jest": "^27.1.3",
+    "puppeteer": "^13.1.1"
+  }
+}
+
+
+
+ 

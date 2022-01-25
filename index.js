@@ -20,10 +20,6 @@ function handleSubmit(event) {
    itemList.innerHTML = `<span id="span_${listNumber}">${inputBox.value}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span><button id="edit_${listNumber}">Edit</button>
    <button id="delete_${listNumber}">Delete</button>`;
    
-   // console.log('itemList.innerHTML', itemList.innerHTML);
-   // 1) click in inputBox, and it consolelogs "empty string"
-   // 2) then type text into inputBox
-   // 3) click submit button, and browser appears to refresh/reset?
    listSection.appendChild(itemList);
    
    const deleteButton = document.getElementById('delete_' + listNumber);
